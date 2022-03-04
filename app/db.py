@@ -128,9 +128,7 @@ def get_json_key(key: str):
 
 
 def get_app_count() -> int:
-    return redis_conn.scard("types:desktop") + redis_conn.scard(
-        "types:console-application"
-    )
+    return redis_conn.scard("apps:index")
 
 
 def get_developers():
